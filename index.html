@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | EduPlatform</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        background: linear-gradient(-45deg, #6a11cb, #2575fc, #00c6ff, #6a82fb);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 90%;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        color: #fff;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 0.8rem;
+        background-color: #fff;
+        color: #3f51b5;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background-color: #d1d9ff;
+      }
+
+      @media (max-width: 500px) {
+        .btn-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎓 EduPlatform</h1>
+      <p>Your learning journey begins here</p>
+      <div class="btn-group">
+        <a class="btn" href="login.html">Login</a>
+        <a class="btn" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </body>
+</html>

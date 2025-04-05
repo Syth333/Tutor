@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz | EduPlatform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f8ff;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: #0d47a1;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .back-btn {
+        color: white;
+        text-decoration: none;
+      }
+
+      .quiz-container {
+        max-width: 700px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .question {
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .options label {
+        display: block;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+        background: #0d47a1;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      #result {
+        margin-top: 1rem;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📝 Quiz Time</h1>
+      <a href="courses.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i> Back to Courses</a
+      >
+    </header>
+
+    <div class="quiz-container">
+      <div class="question" id="question">
+        1. What is the capital of France?
+      </div>
+      <div class="options">
+        <label><input type="radio" name="q1" value="London" /> London</label>
+        <label><input type="radio" name="q1" value="Paris" /> Paris</label>
+        <label><input type="radio" name="q1" value="Rome" /> Rome</label>
+        <label><input type="radio" name="q1" value="Berlin" /> Berlin</label>
+      </div>
+      <button onclick="submitQuiz()">Submit</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function submitQuiz() {
+        const options = document.getElementsByName("q1");
+        let selected;
+        for (const opt of options) {
+          if (opt.checked) {
+            selected = opt.value;
+            break;
+          }
+        }
+
+        const resultDiv = document.getElementById("result");
+        if (!selected) {
+          resultDiv.innerHTML = "❗ Please select an answer.";
+          resultDiv.style.color = "red";
+          return;
+        }
+
+        if (selected === "Paris") {
+          resultDiv.innerHTML = "✅ Correct! 🎉";
+          resultDiv.style.color = "green";
+        } else {
+          resultDiv.innerHTML = "❌ Wrong answer. The correct answer is Paris.";
+          resultDiv.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

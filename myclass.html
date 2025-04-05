@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Classes | EduPlatform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f2f6ff;
+        margin: 0;
+      }
+
+      header {
+        background: #0d47a1;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+        color: #0d47a1;
+      }
+
+      .class-item {
+        background: #e3f2fd;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .class-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .class-info h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #0d47a1;
+      }
+
+      .class-info p {
+        margin: 0.3rem 0 0;
+        font-size: 0.95rem;
+        color: #333;
+      }
+
+      .join-btn {
+        background: #0d47a1;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📅 Today’s Classes</h1>
+      <a href="student.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i> Back to Dashboard</a
+      >
+    </header>
+
+    <div class="container">
+      <h2>Friday, April 5</h2>
+
+      <div class="class-item">
+        <div class="class-info">
+          <h3>🔬 Physics – Quantum Mechanics</h3>
+          <p>⏰ 10:00 AM – 11:00 AM | Instructor: Dr. Smith</p>
+        </div>
+        <a href="discussion.html" class="join-btn">Join</a>
+      </div>
+
+      <div class="class-item">
+        <div class="class-info">
+          <h3>🧮 Mathematics – Algebra II</h3>
+          <p>⏰ 12:00 PM – 1:00 PM | Instructor: Prof. Johnson</p>
+        </div>
+        <a href="discussion.html" class="join-btn">Join</a>
+      </div>
+
+      <div class="class-item">
+        <div class="class-info">
+          <h3>💻 Computer Science – Web Dev</h3>
+          <p>⏰ 3:00 PM – 4:00 PM | Instructor: Ms. Taylor</p>
+        </div>
+        <a href="discussion.html" class="join-btn">Join</a>
+      </div>
+    </div>
+  </body>
+</html>

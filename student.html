@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f2f6ff;
+        display: flex;
+        height: 100vh;
+      }
+
+      .sidebar {
+        width: 220px;
+        background: #0d47a1;
+        color: white;
+        padding: 2rem 1rem;
+      }
+
+      .sidebar h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 1rem 0;
+        font-weight: 500;
+      }
+
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+
+      .main {
+        flex: 1;
+        padding: 2rem;
+      }
+
+      .header {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>🎓 Student</h2>
+      <a href="/courses.html"><i class="fas fa-book"></i> My Courses</a>
+      <a href="/progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+      <a href="/quiz.html"><i class="fas fa-question-circle"></i> Take Quiz</a>
+      <a href="/index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main">
+      <div class="header">Welcome, Student 👋</div>
+      <div class="card">
+        <h3>📘 Active Courses</h3>
+        <p>Math, Science, History</p>
+      </div>
+      <div class="card">
+        <h3>📅 Upcoming Assignment</h3>
+        <p>Science Project due on Monday</p>
+      </div>
+    </div>
+  </body>
+</html>

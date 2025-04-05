@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Courses</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f2f6ff;
+      }
+
+      header {
+        background: #0d47a1;
+        color: white;
+        padding: 1.2rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .back-btn {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+      }
+
+      .course-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .course-links a {
+        display: inline-block;
+        margin: 0.3rem 1rem 0.3rem 0;
+        text-decoration: none;
+        color: #0d47a1;
+        font-weight: 500;
+      }
+
+      .course-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📘 My Courses</h1>
+      <a href="student.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i> Back to Dashboard</a
+      >
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <div class="course-title">🔬 Science - Physics</div>
+        <div class="course-links">
+          <a href="https://www.youtube.com/watch?v=I4x2fPqL9I0" target="_blank"
+            ><i class="fas fa-play-circle"></i> Watch Lecture</a
+          >
+          <a href="resources/physics-notes.pdf" download
+            ><i class="fas fa-file-pdf"></i> Download Notes</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="course-title">🧮 Mathematics - Algebra</div>
+        <div class="course-links">
+          <a href="https://www.youtube.com/watch?v=lR4bOXv2cJc" target="_blank"
+            ><i class="fas fa-play-circle"></i> Watch Lecture</a
+          >
+          <a href="resources/algebra-formulas.pdf" download
+            ><i class="fas fa-file-pdf"></i> Download Formulas</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="course-title">🌍 Geography - Landforms</div>
+        <div class="course-links">
+          <a href="https://www.youtube.com/watch?v=JYUbQmJv6i8" target="_blank"
+            ><i class="fas fa-play-circle"></i> Watch Video</a
+          >
+          <a href="resources/landforms.pdf" download
+            ><i class="fas fa-file-pdf"></i> Download Summary</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

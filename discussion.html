@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discussion Forum | EduPlatform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f2f6ff;
+        margin: 0;
+      }
+      header {
+        background: #0d47a1;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .container {
+        max-width: 700px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .message-box {
+        background: #e3f2fd;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .message-box strong {
+        color: #0d47a1;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+      }
+      button {
+        background: #0d47a1;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>💬 Class Discussion</h1>
+      <a href="myclass.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i> Back to Classes</a
+      >
+    </header>
+
+    <div class="container">
+      <div class="message-box">
+        <strong>Alice:</strong> What are the main principles of Quantum
+        Mechanics?
+      </div>
+
+      <div class="message-box">
+        <strong>Professor Smith:</strong> Good question! The key principles are
+        wave-particle duality, superposition, and quantum entanglement.
+      </div>
+
+      <input type="text" id="message" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+      function sendMessage() {
+        let msg = document.getElementById("message").value;
+        if (msg.trim() !== "") {
+          let newMsg = document.createElement("div");
+          newMsg.className = "message-box";
+          newMsg.innerHTML = `<strong>You:</strong> ${msg}`;
+          document.querySelector(".container").appendChild(newMsg);
+          document.getElementById("message").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
